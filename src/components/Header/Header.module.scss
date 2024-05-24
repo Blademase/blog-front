@@ -1,0 +1,96 @@
+.root {
+  background-color: #fff;
+  padding: 10px 0;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 30px;
+}
+
+.inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  background-color: black;
+  color: #fff;
+  font-weight: 700;
+  line-height: 35px;
+  text-transform: uppercase;
+  letter-spacing: 0.15px;
+  border-radius: 5px;
+  padding: 0 10px;
+  text-decoration: none;
+
+  &:hover {
+    background-color: #4361ee;
+  }
+}
+select {
+  border: none;
+  outline: none;
+  color: black;
+  background-color: #f6f6f6;
+  height: 35px;
+  border-radius: 5px;
+}
+option{
+width: 100px;
+}
+.buttons {
+  button {
+    margin-left: 10px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+.leftRow{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+
+}
+.leftRow a{
+  text-decoration: none;
+
+}
+.userInfo{
+  display: flex;
+  align-items: center;
+}
+.modalBtns{
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+  width: 100%;
+}
+.modalBtns a{
+  padding: 0;
+  height: 36.5px;
+  font-size: 14px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-decoration: none;
+  border-radius: 3px;
+  color: blue;
+  gap: 5px;
+  font-weight: 300;
+}
+.modalBtns a:hover{
+  background-color: #4361ee !important;
+
+  color: white;
+}
+.ModalBtnExit:hover{
+  background-color: red !important;
+  color: white;
+}
+.rightRow{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

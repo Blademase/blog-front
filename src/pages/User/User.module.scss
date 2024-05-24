@@ -1,0 +1,61 @@
+
+.UserInfoMain{
+  display: flex;
+  gap: 30px;
+  align-items: center;
+ }
+.userName{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 26px;
+  //justify-content: center;
+}
+.userEmail{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 300;
+}
+.editLoginField input{
+  height: 30px;
+  outline: none;
+  border: none;
+  background-color: white;
+  font-size: 26px;
+}
+.editEmailField input{
+  outline: none;
+  border: none;
+  height:20px;
+  font-size: 16px;
+  background-color: white;
+
+}
+.avatar {
+  cursor: pointer;
+  transition: filter 0.3s ease; /* Плавный переход */
+}
+
+.avatar:hover {
+  filter: brightness(0.7); /* Уменьшает яркость на 70% */
+}
+.editIcon{
+  position: absolute;
+  margin-left: 770px;
+  margin-top: -50px;
+}
+.editIconAvatar {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0; /* Изначально иконка скрыта */
+  transition: opacity 0.3s ease;
+  pointer-events: none; /* Иконка не перехватывает события мыши */
+}
+
+.avatar:hover .editIcon {
+  opacity: 1; /* Показать иконку при наведении */
+}
