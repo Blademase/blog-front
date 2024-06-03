@@ -6,6 +6,7 @@ import { fetchPosts, fetchTags } from "../redux/slices/posts";
 import { Post } from "../components/Post";
 import { TagsBlock } from "../components/TagsBlock";
 import { CommentsBlock } from "../components/CommentsBlock";
+import {Helmet} from "react-helmet";
 
 export const TagsPage = () => {
   const { tag } = useParams(); // Получаем параметр из URL
@@ -38,6 +39,9 @@ export const TagsPage = () => {
 
   return (
     <Grid container spacing={4}>
+      <Helmet>
+        <title>Поиск по тегам</title>
+      </Helmet>
       <Grid xs={8} item>
         {isPostsLoading ? (
           <p>{loading}</p>

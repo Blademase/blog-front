@@ -9,6 +9,7 @@ import AddComment from "../components/AddComment/index";
 import ReactMarkdown from "react-markdown";
 import { CommentsBlock } from "../components/CommentsBlock";
 import { useSelector } from "react-redux";
+import {Helmet} from "react-helmet";
 
 export const FullPost = () => {
     const [data, setData] = useState(null);
@@ -146,6 +147,9 @@ if (lang === "ru"){
     }
     return (
         <>
+            <Helmet>
+                <title>Страница поста</title>
+            </Helmet>
             <Post
                 id={data._id}
                 title={getTitleByLanguage(data)}

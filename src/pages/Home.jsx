@@ -18,6 +18,7 @@ import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 import FmdGoodIcon from '@mui/icons-material/FmdGood';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import LoadingIndicator from "./User/Loading";
+import {Helmet} from "react-helmet";
 
 const ReviewModal = ({ isOpen, onClose }) => {
     const [name, setName] = useState("");
@@ -69,6 +70,7 @@ const ReviewModal = ({ isOpen, onClose }) => {
     };
 
     return (
+
         <Modal
             open={isOpen}
             onClose={onClose}
@@ -279,6 +281,9 @@ export const Home = () => {
     console.log(posts);
     return (
         <>
+            <Helmet>
+                <title>Главная страница</title>
+            </Helmet>
             <Tabs
                 style={{ marginBottom: 15 }}
                 value={activeTab}

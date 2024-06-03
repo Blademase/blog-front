@@ -8,6 +8,7 @@ import { useForm } from "react-hook-form";
 import styles from "./Login.module.scss";
 import { fetchAuth, selectIsAuth } from "../../redux/slices/auth";
 import { useNavigate } from "react-router-dom";
+import {Helmet} from "react-helmet";
 
 export const Login = () => {
   const navigate = useNavigate();
@@ -51,6 +52,9 @@ export const Login = () => {
 
   return (
       <Paper classes={{ root: styles.root }}>
+        <Helmet>
+          <title>Авторизация</title>
+        </Helmet>
         <Typography classes={{ root: styles.title }} variant="h5">
           Вход в аккаунт
         </Typography>

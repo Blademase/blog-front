@@ -11,6 +11,7 @@ import { useForm } from "react-hook-form";
 import axios from "../../redux/axios";
 
 import styles from "./Login.module.scss";
+import {Helmet} from "react-helmet";
 
 export const Registration = () => {
   const isAuth = useSelector(selectIsAuth);
@@ -65,6 +66,9 @@ export const Registration = () => {
 
   return (
     <Paper classes={{ root: styles.root }}>
+        <Helmet>
+            <title>Регистрация</title>
+        </Helmet>
       <Typography classes={{ root: styles.title }} variant="h5">
         Создание аккаунта
       </Typography>

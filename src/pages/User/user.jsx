@@ -14,6 +14,7 @@ import Avatar from "@mui/material/Avatar";
 import styles from "./User.module.scss";
 import loading from "./Loading";
 import LoadingIndicator from "./Loading";
+import {Helmet} from "react-helmet";
 
 export const User = () => {
     const dispatch = useDispatch();
@@ -175,6 +176,9 @@ export const User = () => {
     else if(userData) {
         return (
             <div className={styles.userPage}>
+                <Helmet>
+                    <title>Страница пользователя</title>
+                </Helmet>
                 <div className={styles.UserInfo}>
                     <div className={styles.UserInfoMain}>
                         <div

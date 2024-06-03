@@ -11,7 +11,8 @@ import "easymde/dist/easymde.min.css";
 import styles from "./AddPost.module.scss";
 import { selectIsAuth } from "../../redux/slices/auth";
 import ButtonGroup from "@mui/material/ButtonGroup";
-import ErrorModal from "./ErrorModal"; // Импортируем модальное окно
+import ErrorModal from "./ErrorModal";
+import {Helmet} from "react-helmet"; // Импортируем модальное окно
 
 export const AddPost = () => {
     const { id } = useParams();
@@ -210,7 +211,11 @@ export const AddPost = () => {
     }
 
     return (
+
         <Paper style={{ padding: 30 }}>
+            <Helmet>
+                <title>Добавление и редактирование поста</title>
+            </Helmet>
             <div className="LanguageSelector">
                 <ButtonGroup variant="outlined" aria-label="Basic Tags group">
                     <Button
