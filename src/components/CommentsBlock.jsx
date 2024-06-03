@@ -35,7 +35,7 @@ export const CommentsBlock = ({ items, children }) => {
     // http://localhost:4444/posts/664ee012e2a8f8ef77bd37b5/comments/664ee1a3e2a8f8ef77bd3801
     console.log(userData)
     const handleDeleteComment = (commentId, authorId, postId) => {
-        if (userData.email === authorId || userData.email === "admin@admin.kg") {
+        if (userData?.email === authorId || userData?.email === "admin@admin.kg") {
             setLoadingStates(prevState => ({ ...prevState, [commentId]: true }));
 
             let URL;
@@ -81,11 +81,11 @@ export const CommentsBlock = ({ items, children }) => {
                                 primary={obj?.user.fullName}
                                 secondary={obj?.text}
                             />
-                            {(userData.email === obj?.user.email || userData?.email === "admin@admin.kg") && (
+                            {(userData?.email === obj?.user.email || userData?.email === "admin@admin.kg") && (
                                 <IconButton
                                     edge="end"
                                     aria-label="delete"
-                                    onClick={() => handleDeleteComment(obj._id, obj.user.email, obj.post)}
+                                    onClick={() => handleDeleteComment(obj?._id, obj?.user.email, obj?.post)}
                                 >
                                     {loadingStates[obj._id] ? (
                                         <CircularProgress size={24} />
